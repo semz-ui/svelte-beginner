@@ -18,5 +18,5 @@ const port = process.env.PORT || 5000;
 
 app.use("/api/users", userRoutes);
 app.use("/api/todo", postRoutes);
-
+app.get("/", (req, res) => res.json("Server Started"));
 app.listen(port, () => console.log(`App listening on port ` + port));
